@@ -1,0 +1,33 @@
+version: '3.7'
+
+# Define services
+services:
+  # Frontend Service 
+  client:
+    build:
+      context: client
+      dockerfile: Dockerfile
+    ports:
+      - "1339:80" # Forward the exposed port 80 on the container to port 80 on the host machine
+    restart: always
+    depends_on:
+      - server
+    networks:
+      - frontend
+  server:
+    build:
+      context: server
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+    networks:
+      - backend
+    stdin_open: true
+    tty: true
+
+# Volumes
+networks:
+  backend:
+  frontend:

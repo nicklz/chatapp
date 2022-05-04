@@ -1,0 +1,118 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+ul, li {
+  list-style: none;
+}
+
+.wrapper {
+  animation: fadein 1.5s;
+}
+
+.page {
+  min-block-size: 90vh;
+}
+
+.container {
+  min-block-size: 200px;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  margin-inline: auto;
+  margin-block: 1rem;
+  background-color: #eee;
+  border: 1px dashed #666;
+  
+}
+
+.header .title {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+
+.alert {
+  padding: 2rem;
+  color: white;
+  font-weight: bold;
+  box-shadow: 5px 5px 8px grey;
+}
+.success {
+  background-color: green
+}
+
+.error {
+  background-color: red
+}
+
+footer {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+select,
+input {
+  margin-inline-start: 1rem;
+}
+
+form {
+  padding-block: 4rem;
+}
+
+li {
+  border-bottom: 1px solid black;
+  padding: 0.5rem;
+}
+
+ul {
+  margin-block: 1rem;
+}
+
+img {
+  max-inline-size: 90vw;
+}
+
+h1 {
+  margin-block-end: 1rem;
+
+}
+
+.history {
+    inline-size: 50vw;
+    block-size: 50vh;
+    overflow-y: scroll;
+    background-color: #ccc;
+}
+
+h4 {
+  margin-block-end: 1rem;
+  font-style: italic;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
